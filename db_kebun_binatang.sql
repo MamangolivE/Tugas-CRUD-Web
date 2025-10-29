@@ -1,0 +1,14 @@
+CREATE DATABASE db_kebun_binatang;
+USE db_kebun_binatang;
+
+CREATE TABLE hewan (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  nama VARCHAR(100) NOT NULL,
+  jenis VARCHAR(50) NOT NULL,
+  asal VARCHAR(50) NOT NULL,
+  deskripsi TEXT,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+);
+
+SELECT * FROM hewan;
