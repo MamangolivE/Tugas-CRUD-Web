@@ -25,45 +25,66 @@ try {
 ?>
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Hewan: <?php echo htmlspecialchars($data['nama']); ?></title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container form-container">
-        <h1>Detail Hewan: <?php echo htmlspecialchars($data['nama']); ?></h1>
-        <a href="index.php" class="btn btn-back">← Kembali ke Daftar</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detail Hewan: <?php echo htmlspecialchars($data['nama']); ?></title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container form-container">
+            <h1>Detail Hewan: <?php echo htmlspecialchars($data['nama']); ?></h1>
+            <a href="index.php" class="btn btn-back">← Kembali ke Daftar</a>
 
-        <div class="detail-card">
-            <table>
-                <tr>
-                    <th>ID Kunci</th>
-                    <td><?php echo htmlspecialchars($data['id']); ?></td>
-                </tr>
-                <tr>
-                    <th>Jenis</th>
-                    <td><?php echo htmlspecialchars($data['jenis']); ?></td>
-                </tr>
-                <tr>
-                    <th>Asal</th>
-                    <td><?php echo htmlspecialchars($data['asal']); ?></td>
-                </tr>
-                <tr>
-                    <th>Ditambahkan Pada</th>
-                    <td><?php echo date('d M Y H:i:s', strtotime($data['created_at'])); ?></td>
-                </tr>
-            </table>
-            <div class="deskripsi-section">
-                <h3>Deskripsi Lengkap:</h3>
-                <p><?php echo nl2br(htmlspecialchars($data['deskripsi'])); ?></p>
-            </div>
-            <div class="aksi-detail">
-                <a href="ubah.php?id=<?php echo $data['id']; ?>" class="btn btn-edit">Ubah Data</a> 
-                <a href="hapus.php?id=<?php echo $data['id']; ?>" class="btn btn-hapus" onclick="return confirm('Yakin ingin menghapus <?php echo addslashes($data['nama']); ?>?');">Hapus Data</a>
+            <div class="detail-card">
+                <table>
+                    <tr>
+                        <th>ID Kunci</th>
+                        <td><?php echo htmlspecialchars($data['id']); ?></td>
+                    </tr>
+                    <tr>
+                        <th>Jenis</th>
+                        <td><?php echo htmlspecialchars($data['jenis']); ?></td>
+                    </tr>
+                    <tr>
+                        <th>Asal</th>
+                        <td><?php echo htmlspecialchars($data['asal']); ?></td>
+                    </tr>
+                    <tr>
+                        <th>Ditambahkan Pada</th>
+                        <td><?php echo date('d M Y H:i:s', strtotime($data['created_at'])); ?></td>
+                    </tr>
+                </table>
+                <div class="deskripsi-section">
+                    <h3>Deskripsi Lengkap:</h3>
+                    <p><?php echo nl2br(htmlspecialchars($data['deskripsi'])); ?></p>
+                </div>
+                <div class="aksi-detail">
+                    <a href="ubah.php?id=<?php echo $data['id']; ?>" class="btn btn-edit">Ubah Data</a>     
+                    <button 
+                        class="btn btn-hapus btn-modal-hapus" 
+                        data-bs-id="<?php echo $data['id']; ?>" 
+                        data-bs-nama="<?php echo htmlspecialchars($data['nama']); ?>">
+                        Hapus Data
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+        <div id="modalHapus" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Konfirmasi Hapus Data</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Anda yakin ingin menghapus data hewan <span id="hewanNama"></span>?</p>
+                    <p style="font-size: 0.9em; color: #777;">Tindakan ini tidak dapat dibatalkan.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" id="btnBatal">Batal</button>
+                    <a href="#" id="btnKonfirmasiHapus" class="btn btn-hapus">Ya, Hapus!</a>
+                </div>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
 </html>

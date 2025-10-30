@@ -155,6 +155,6 @@ $hewan_data = $stmt->fetchAll();
                 </div>
             </div>
         </div>
+        <script src="scripts.js"></script>
     </body>
-<script src="scripts.js"></script>
 </html>
