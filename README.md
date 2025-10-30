@@ -1,7 +1,7 @@
-**Daftar Hewan Kebun Binatang**
+**Daftar Hewan Kebun Binatang:**
 Aplikasi sederhana untuk mengelola daftar koleksi hewan yang ada di kebun binatang. Dibangun menggunakan PHP native dan koneksi database yang aman (PDO) tanpa menggunakan framework atau ORM.
 
-**Fitur yang Tersedia**
+**Fitur yang Tersedia:**
 Aplikasi ini menyediakan fungsi dasar Create, Read, Update, dan Delete (CRUD) lengkap dengan fitur-fitur pendukung:
 -Create (Tambah): Form untuk menambahkan data hewan baru (Nama, Jenis, Asal, Deskripsi).
 -Read (Tampil): Menampilkan semua data hewan dalam bentuk tabel yang diurutkan berdasarkan waktu penambahan terbaru (created_at DESC).
@@ -12,14 +12,14 @@ Aplikasi ini menyediakan fungsi dasar Create, Read, Update, dan Delete (CRUD) le
 -Pagination: Pembatasan tampilan data, menampilkan maksimal 5 data per halaman.
 -Keamanan: Menggunakan PDO Prepared Statements untuk menghindari serangan SQL Injection dan htmlspecialchars() untuk mencegah XSS.
 
-**Kebutuhan Sistem**
+**Kebutuhan Sistem:**
 Untuk menjalankan aplikasi ini di lingkungan lokal Anda, pastikan Anda memiliki prasyarat berikut:
 -Web Server: XAMPP, Laragon, WAMP, atau server lain yang mendukung PHP dan MySQL.
 -PHP: Minimal PHP 8.0 atau versi yang lebih baru.
 -Database: MySQL atau MariaDB.
 -Ekstensi PHP: Pastikan ekstensi PDO aktif (biasanya sudah aktif secara default).
 
-**Cara Instalasi dan Konfigurasi**
+**Cara Instalasi dan Konfigurasi:**
 Ikuti langkah-langkah berikut untuk menjalankan aplikasi:
 1. Kloning/Unduh Proyek
 Tempatkan semua file PHP dan CSS ke dalam direktori web server Laragon Anda (biasanya: C:\laragon\www\kebun_binatang).
@@ -55,8 +55,13 @@ $pass = '';     // Laragon default password MySQL/MariaDB biasanya kosong
 4. Jalankan Aplikasi
 Akses aplikasi melalui browser Anda. Jika Anda menggunakan Virtual Host bawaan Laragon (misalnya kebun_binatang.test), akses melalui URL tersebut. Jika tidak, akses melalui http://localhost/kebun_binatang/.
 
-**Struktur Folder**
+**Struktur Folder:**
+```
 kebun_binatang/
+├── gambar
+  ├── halamanutama.png
+  ├── tambahdata.png
+  ...
 ├── index.php      # READ (Daftar, Pagination, Pencarian)
 ├── tambah.php     # CREATE (Form Tambah)
 ├── ubah.php       # UPDATE (Form Edit)
@@ -65,8 +70,9 @@ kebun_binatang/
 ├── koneksi.php    # Konfigurasi Koneksi PDO
 ├── style.css      # Styling
 └── README.md
+```
 
-**Contoh Environment Config**
+**Contoh Environment Config:**
 Aplikasi ini tidak memerlukan file .env terpisah, namun konfigurasi utama terdapat pada file koneksi.php 
 yang berisi variabel-variabel berikut:
 // File: koneksi.php
@@ -75,7 +81,7 @@ $db   = 'db_kebun_binatang';
 $user = 'root';
 $pass = '';
 
-**Screenshot Aplikasi**
+**Screenshot Aplikasi :**
 ![Screenshot Halaman Utama CRUD Kebun Binatang](gambar/halamanutama.png)
 ![Screenshot Halaman Tambah Data CRUD Kebun Binatang](gambar/tambahdata.png)
 ![Screenshot Berhasil Tambah Data CRUD Kebun Binatang](gambar/berhasiltambah.png)
