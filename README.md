@@ -1,25 +1,23 @@
 **Daftar Hewan Kebun Binatang:**
-```
 Aplikasi sederhana untuk mengelola daftar koleksi hewan yang ada di kebun binatang. Dibangun menggunakan PHP native dan koneksi database yang aman (PDO) tanpa menggunakan framework atau ORM.
-```
 
 **Fitur yang Tersedia:**
 Aplikasi ini menyediakan fungsi dasar Create, Read, Update, dan Delete (CRUD) lengkap dengan fitur-fitur pendukung:
--Create (Tambah): Form untuk menambahkan data hewan baru (Nama, Jenis, Asal, Deskripsi).
--Read (Tampil): Menampilkan semua data hewan dalam bentuk tabel yang diurutkan berdasarkan waktu penambahan terbaru (created_at DESC).
--Read Detail: Halaman terpisah untuk melihat detail lengkap setiap item.
--Update (Ubah): Form edit data dengan prefill (data lama) yang dimuat dari database.
--Delete (Hapus): Tombol hapus interaktif.
--Pencarian: Fitur pencarian data berdasarkan kolom Nama dan Jenis hewan.
--Pagination: Pembatasan tampilan data, menampilkan maksimal 5 data per halaman.
--Keamanan: Menggunakan PDO Prepared Statements untuk menghindari serangan SQL Injection dan htmlspecialchars() untuk mencegah XSS.
+- Create (Tambah): Form untuk menambahkan data hewan baru (Nama, Jenis, Asal, Deskripsi).
+- Read (Tampil): Menampilkan semua data hewan dalam bentuk tabel yang diurutkan berdasarkan waktu penambahan terbaru (created_at DESC).
+- Read Detail: Halaman terpisah untuk melihat detail lengkap setiap item.
+- Update (Ubah): Form edit data dengan prefill (data lama) yang dimuat dari database.
+- Delete (Hapus): Tombol hapus interaktif.
+- Pencarian: Fitur pencarian data berdasarkan kolom Nama dan Jenis hewan.
+- Pagination: Pembatasan tampilan data, menampilkan maksimal 5 data per halaman.
+- Keamanan: Menggunakan PDO Prepared Statements untuk menghindari serangan SQL Injection dan htmlspecialchars() untuk mencegah XSS.
 
 **Kebutuhan Sistem:**
 Untuk menjalankan aplikasi ini di lingkungan lokal Anda, pastikan Anda memiliki prasyarat berikut:
--Web Server: XAMPP, Laragon, WAMP, atau server lain yang mendukung PHP dan MySQL.
--PHP: Minimal PHP 8.0 atau versi yang lebih baru.
--Database: MySQL atau MariaDB.
--Ekstensi PHP: Pastikan ekstensi PDO aktif (biasanya sudah aktif secara default).
+- Web Server: XAMPP, Laragon, WAMP, atau server lain yang mendukung PHP dan MySQL.
+- PHP: Minimal PHP 8.0 atau versi yang lebih baru.
+- Database: MySQL atau MariaDB.
+- Ekstensi PHP: Pastikan ekstensi PDO aktif (biasanya sudah aktif secara default).
 
 **Cara Instalasi dan Konfigurasi:**
 Ikuti langkah-langkah berikut untuk menjalankan aplikasi:
@@ -27,10 +25,10 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi:
 Tempatkan semua file PHP dan CSS ke dalam direktori web server Laragon Anda (biasanya: C:\laragon\www\kebun_binatang).
 
 2. Konfigurasi Database
--Pastikan MySQL/MariaDB sudah berjalan di Laragon.
--Buka aplikasi MySQL Workbench, DBeaver, HeidiSQL, phpMyAdmin, Navicat for MySQL, atau yang lainnya(tergantung anda memakai aplikasi apa).
--Lalu buka script SQL yang telah disimpan bersama file PHP dan CSS di aplikasi yang anda gunakan.
--Jalankan query SQL berikut untuk membuat dan memakai database yang telah dibuat: 
+- Pastikan MySQL/MariaDB sudah berjalan di Laragon.
+- Buka aplikasi MySQL Workbench, DBeaver, HeidiSQL, phpMyAdmin, Navicat for MySQL, atau yang lainnya(tergantung anda memakai aplikasi apa).
+- Lalu buka script SQL yang telah disimpan bersama file PHP dan CSS di aplikasi yang anda gunakan.
+- Jalankan query SQL berikut untuk membuat dan memakai database yang telah dibuat: 
 ```
 CREATE DATABASE `db_kebun_binatang`;
 USE `db_kebun_binatang`;
