@@ -60,6 +60,7 @@ $pass = '';     // Laragon default password MySQL/MariaDB biasanya kosong
 Akses aplikasi melalui browser Anda. Jika Anda menggunakan Virtual Host bawaan Laragon (misalnya kebun_binatang.test), akses melalui URL tersebut. Jika tidak, akses melalui http://localhost/kebun_binatang/.
 
 **Struktur Folder:**
+```
 kebun_binatang/
 ├── gambar
   ├── halamanutama.png
@@ -73,6 +74,7 @@ kebun_binatang/
 ├── koneksi.php    # Konfigurasi Koneksi PDO
 ├── style.css      # Styling
 └── README.md
+```
 
 **Contoh Environment Config:**
 Aplikasi ini tidak memerlukan file .env terpisah, namun konfigurasi utama terdapat pada file koneksi.php 
