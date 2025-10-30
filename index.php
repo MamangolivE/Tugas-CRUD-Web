@@ -70,7 +70,6 @@ $hewan_data = $stmt->fetchAll();
 
                 if($total_data > 0) {
                 ?>
-                <p class="data-info">Menampilkan <?php echo $total_data; ?> data hewan.</p>
                 <table>
                     <thead>
                         <tr>
