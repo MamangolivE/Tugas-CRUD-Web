@@ -79,7 +79,7 @@ $pass = '';
 ![Screenshot Halaman Utama CRUD Kebun Binatang](gambar/halamanutama.png)
 ![Screenshot Halaman Tambah Data CRUD Kebun Binatang](gambar/tambahdata.png)
 ![Screenshot Berhasil Tambah Data CRUD Kebun Binatang](gambar/berhasiltambah.png)
-![Screenshot Edit Data CRUD Kebun Binatang](gambar/editdata.png)
+![Screenshot Edit Data CRUD Kebun Binatang](gambar/ubahdata.png)
 ![Screenshot Detail Data CRUD Kebun Binatang](gambar/detaildata.png)
 ![Screenshot Hapus Data CRUD Kebun Binatang](gambar/hapusdata.png)
 ![Screenshot Berhasil Hapus CRUD Kebun Binatang](gambar/berhasilhapus.png)
