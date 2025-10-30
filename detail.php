@@ -61,7 +61,12 @@ try {
             </div>
             <div class="aksi-detail">
                 <a href="ubah.php?id=<?php echo $data['id']; ?>" class="btn btn-edit">Ubah Data</a> 
-                <a href="hapus.php?id=<?php echo $data['id']; ?>" class="btn btn-hapus" onclick="return confirm('Yakin ingin menghapus <?php echo addslashes($data['nama']); ?>?');">Hapus Data</a>
+                <button 
+                    class="btn btn-hapus btn-modal-hapus" 
+                    data-bs-id="<?php echo $data['id']; ?>" 
+                    data-bs-nama="<?php echo htmlspecialchars($data['nama']); ?>">
+                    Hapus
+                </button>
             </div>
         </div>
     </div>
