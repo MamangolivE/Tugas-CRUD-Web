@@ -30,18 +30,18 @@ Tempatkan semua file PHP dan CSS ke dalam direktori web server Laragon Anda (bia
 - Lalu buka script SQL yang telah disimpan bersama file PHP dan CSS di aplikasi yang anda gunakan.
 - Jalankan query SQL berikut untuk membuat dan memakai database yang telah dibuat: 
 ```
-CREATE DATABASE `db_kebun_binatang`;
-USE `db_kebun_binatang`;
+CREATE DATABASE db_kebun_binatang;
+USE db_kebun_binatang;
 ```
 Lalu jalankan query SQL berikut untuk membuat tabel hewan:
 ```
-CREATE TABLE `hewan` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `nama` VARCHAR(100) NOT NULL,
-  `jenis` VARCHAR(50) NOT NULL,
-  `asal` VARCHAR(50) NOT NULL,
-  `deskripsi` TEXT,
-  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+CREATE TABLE hewan (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  nama VARCHAR(100) NOT NULL,
+  jenis VARCHAR(50) NOT NULL,
+  asal VARCHAR(50) NOT NULL,
+  deskripsi TEXT,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 );
 ```
@@ -60,7 +60,6 @@ $pass = '';     // Laragon default password MySQL/MariaDB biasanya kosong
 Akses aplikasi melalui browser Anda. Jika Anda menggunakan Virtual Host bawaan Laragon (misalnya kebun_binatang.test), akses melalui URL tersebut. Jika tidak, akses melalui http://localhost/kebun_binatang/.
 
 **Struktur Folder:**
-```
 kebun_binatang/
 ├── gambar
   ├── halamanutama.png
@@ -74,7 +73,6 @@ kebun_binatang/
 ├── koneksi.php    # Konfigurasi Koneksi PDO
 ├── style.css      # Styling
 └── README.md
-```
 
 **Contoh Environment Config:**
 Aplikasi ini tidak memerlukan file .env terpisah, namun konfigurasi utama terdapat pada file koneksi.php 
